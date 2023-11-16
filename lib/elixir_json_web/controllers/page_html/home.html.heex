@@ -1,0 +1,10 @@
+<.flash_group flash={@flash} />
+<div>
+    <h1 class="font-medium">Upload your CSV</h1>
+    <.form method="post" enctype="multipart/form-data">
+        <input type="file" name="file"/>
+    <input type="hidden" name="_csrf_token" value={"#{get_csrf_token()}"} />
+
+    <button type="submit">send</button>
+    </.form>
+</div>
